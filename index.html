@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mise is the AI backend for restaurants — automatically running purchasing, inventory, and operations so independent operators run with the efficiency of a national chain." />
+  <meta name="description" content="Mise is an AI operations system that tells restaurants exactly what to prep, order, and buy — and helps them execute it." />
   <title>Mise — AI-Powered Restaurant Operations</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -44,68 +44,61 @@
       <div class="container hero__inner">
         <div class="hero__badge">✦ Now in early access</div>
         <h1 class="hero__heading">
-          The AI brain that<br />runs your restaurant.
+          Your kitchen's<br />AI operations system.
         </h1>
         <p class="hero__sub">
-          Mise automatically handles purchasing, inventory, and operations—so
-          independent operators get the back-office horsepower of a national
-          chain without the overhead.
+          Mise is an AI operations system that tells restaurants exactly what to
+          prep, order, and buy — and helps them execute it.
         </p>
         <div class="hero__actions">
-          <a href="#contact" class="btn btn--primary btn--lg">Get early access</a>
+          <a href="#contact" class="btn btn--primary btn--lg">Run your kitchen smarter</a>
           <a href="#how-it-works" class="btn btn--outline btn--lg">See how it works</a>
         </div>
         <p class="hero__disclaimer">Free during beta · No credit card required</p>
       </div>
 
       <div class="hero__visual" aria-hidden="true">
-        <div class="dashboard-mock">
-          <div class="dash-topbar">
-            <span class="dash-dot red"></span>
-            <span class="dash-dot yellow"></span>
-            <span class="dash-dot green"></span>
-            <span class="dash-title">Mise Dashboard</span>
+        <div class="action-card">
+          <div class="action-card__header">
+            <span class="action-card__logo">mise<span class="logo-dot">.</span></span>
+            <span class="action-card__label">Today's recommendations</span>
           </div>
-          <div class="dash-body">
-            <div class="dash-sidebar">
-              <div class="dash-nav-item active">📊 Overview</div>
-              <div class="dash-nav-item">🛒 Purchasing</div>
-              <div class="dash-nav-item">📦 Inventory</div>
-              <div class="dash-nav-item">⚙️ Operations</div>
-              <div class="dash-nav-item">📈 Analytics</div>
+          <div class="action-card__list">
+            <div class="action-item">
+              <div class="action-item__icon">🥩</div>
+              <div class="action-item__body">
+                <div class="action-item__title">Prep 42 portions of salmon</div>
+                <div class="action-item__reason">Friday sales typically spike 28% — you'll need it</div>
+              </div>
+              <div class="action-item__badge action-item__badge--done">Done</div>
             </div>
-            <div class="dash-main">
-              <div class="dash-kpis">
-                <div class="kpi-card">
-                  <div class="kpi-label">Food Cost %</div>
-                  <div class="kpi-value green-text">28.4%</div>
-                  <div class="kpi-delta">▼ 2.1% vs last week</div>
-                </div>
-                <div class="kpi-card">
-                  <div class="kpi-label">Orders Automated</div>
-                  <div class="kpi-value">47</div>
-                  <div class="kpi-delta">↑ This week</div>
-                </div>
-                <div class="kpi-card">
-                  <div class="kpi-label">Waste Saved</div>
-                  <div class="kpi-value green-text">$312</div>
-                  <div class="kpi-delta">This month</div>
-                </div>
+            <div class="action-item action-item--highlight">
+              <div class="action-item__icon">📦</div>
+              <div class="action-item__body">
+                <div class="action-item__title">Order chicken breast — 40 lbs</div>
+                <div class="action-item__reason">Sysco · Tue delivery · 3-day lead time</div>
               </div>
-              <div class="dash-chart">
-                <div class="chart-bar" style="height:55%"></div>
-                <div class="chart-bar" style="height:70%"></div>
-                <div class="chart-bar" style="height:48%"></div>
-                <div class="chart-bar" style="height:82%"></div>
-                <div class="chart-bar active" style="height:65%"></div>
-                <div class="chart-bar" style="height:90%"></div>
-                <div class="chart-bar" style="height:74%"></div>
-              </div>
-              <div class="dash-alert">
-                <span class="alert-icon">🤖</span>
-                <span>Mise auto-placed your Tuesday produce order with FreshDirect. Saved $48.</span>
-              </div>
+              <div class="action-item__badge action-item__badge--approve">Approve</div>
             </div>
+            <div class="action-item">
+              <div class="action-item__icon">💰</div>
+              <div class="action-item__body">
+                <div class="action-item__title">Switch beef supplier</div>
+                <div class="action-item__reason">US Foods saves $1.20/lb vs your current vendor</div>
+              </div>
+              <div class="action-item__badge action-item__badge--review">Review</div>
+            </div>
+            <div class="action-item">
+              <div class="action-item__icon">🥬</div>
+              <div class="action-item__body">
+                <div class="action-item__title">Skip romaine reorder this week</div>
+                <div class="action-item__reason">2 cases on hand · slower salad sales Mon–Wed</div>
+              </div>
+              <div class="action-item__badge action-item__badge--done">Done</div>
+            </div>
+          </div>
+          <div class="action-card__footer">
+            <span class="action-card__stat">✅ Mise handled 6 orders this week · Saved est. $340</span>
           </div>
         </div>
       </div>
@@ -131,30 +124,30 @@
       <div class="container problem__inner">
         <div class="problem__text">
           <span class="section-label">The problem</span>
-          <h2>National chains have armies of analysts. You have yourself.</h2>
+          <h2>Built for operators who don't have time. Not analysts who want dashboards.</h2>
           <p>
-            A Chili's or Applebee's has dedicated purchasing teams, inventory
-            systems worth hundreds of thousands of dollars, and operations
-            managers optimizing every shift. Independent restaurants are
-            competing against that with spreadsheets, gut feel, and no time.
+            Most restaurants are over-ordering, under-ordering, and manually
+            managing everything in between — losing money to waste and losing
+            sales to empty shelves. All while running service.
           </p>
           <p>
-            Mise levels the playing field — putting enterprise-grade automation
-            behind every independent kitchen.
+            Mise doesn't give you another system to learn. It watches your
+            sales, tracks your inventory, and tells you exactly what to prep,
+            order, and buy — in plain language, every day.
           </p>
         </div>
         <div class="problem__stats">
           <div class="stat-card">
-            <div class="stat-number">60%</div>
-            <div class="stat-desc">of restaurants fail in the first year, largely due to poor inventory &amp; cost control</div>
+            <div class="stat-number">Over-order</div>
+            <div class="stat-desc">→ waste money on food that spoils before it's used</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">12 hrs</div>
-            <div class="stat-desc">avg. time operators spend weekly on purchasing &amp; admin tasks that Mise automates</div>
+            <div class="stat-number">Under-order</div>
+            <div class="stat-desc">→ run out mid-service and lose revenue you can't recover</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">4–8%</div>
-            <div class="stat-desc">reduction in food cost achievable through smarter purchasing &amp; waste reduction</div>
+            <div class="stat-number">Manual work</div>
+            <div class="stat-desc">→ 10–15 hrs/week on ordering, tracking, and spreadsheets</div>
           </div>
         </div>
       </div>
@@ -165,105 +158,80 @@
       <div class="container">
         <div class="section-header">
           <span class="section-label">What Mise does</span>
-          <h2>Everything that runs behind a great restaurant — automated.</h2>
+          <h2>Four things. Done automatically, every day.</h2>
           <p class="section-sub">
-            Mise connects to your POS, supplier accounts, and schedules to give
-            you a self-running operation.
+            No setup complexity. No learning curve. Mise speaks your language —
+            ingredients, orders, and prep — not metrics and modules.
           </p>
         </div>
 
         <div class="features__grid">
 
           <div class="feature-card feature-card--highlight">
-            <div class="feature-icon">🛒</div>
-            <h3>Autonomous Purchasing</h3>
+            <div class="feature-icon">📈</div>
+            <h3>Demand Intelligence</h3>
             <p>
-              Mise monitors your par levels, sales velocity, and supplier lead
-              times, then automatically places orders before you run out —
-              negotiating the best prices across your approved vendor list.
+              Mise reads your sales history and spots the patterns you don't
+              have time to notice — which items spike on weekends, how weather
+              affects covers, when a slow week follows a big one.
             </p>
             <ul class="feature-list">
-              <li>Auto-reorder based on real usage data</li>
-              <li>Price-compare across suppliers instantly</li>
-              <li>Approve or override with one tap</li>
+              <li>Predicts what you'll need before you run out</li>
+              <li>Accounts for seasonality and local events</li>
+              <li>Gets smarter the longer you use it</li>
             </ul>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">📦</div>
-            <h3>Live Inventory Tracking</h3>
+            <h3>Inventory Optimization</h3>
             <p>
-              Know exactly what you have, what you're burning through, and what
-              you're wasting — updated in real time as orders come in and
-              deliveries arrive.
+              Know exactly what's on hand, what's being used, and what's about
+              to expire — without counting every shelf manually. Mise prevents
+              over-ordering and catches waste before it happens.
             </p>
             <ul class="feature-list">
-              <li>Automatic depletion from POS sales</li>
-              <li>Waste logging and trend alerts</li>
-              <li>Shelf-life and expiry warnings</li>
+              <li>Real-time depletion from POS sales</li>
+              <li>Shelf-life and expiry alerts</li>
+              <li>Waste tracking with trend summaries</li>
             </ul>
           </div>
 
           <div class="feature-card">
-            <div class="feature-icon">⚙️</div>
-            <h3>Operations Intelligence</h3>
+            <div class="feature-icon">🛒</div>
+            <h3>Purchase Recommendations</h3>
             <p>
-              From staff scheduling to prep sheets, Mise turns your historical
-              data into actionable operational playbooks that update every week
-              based on what's actually happening in your kitchen.
+              Every day, Mise generates exact supplier orders — the right
+              quantities, from the right vendors, timed to arrive exactly when
+              you need them. You approve in one tap or let it run.
             </p>
             <ul class="feature-list">
-              <li>Demand-based prep quantity recommendations</li>
-              <li>Labor cost optimization suggestions</li>
-              <li>Vendor performance scorecards</li>
+              <li>Exact quantities based on real usage data</li>
+              <li>Best-price comparison across your vendors</li>
+              <li>Approve, adjust, or skip with one tap</li>
             </ul>
           </div>
 
           <div class="feature-card">
-            <div class="feature-icon">📊</div>
-            <h3>Financial Command Center</h3>
+            <div class="feature-icon">✅</div>
+            <h3>Order Execution</h3>
             <p>
-              See your food cost percentage, prime cost, and margin by menu
-              item in a single dashboard — with AI-generated explanations and
-              recommended actions.
+              Once you approve, Mise sends the order directly to your
+              supplier — formatted exactly how they want it. No phone calls,
+              no faxes, no re-keying into a portal.
             </p>
             <ul class="feature-list">
-              <li>Daily P&amp;L snapshots</li>
-              <li>Menu engineering insights</li>
-              <li>Spend analytics by category</li>
+              <li>Direct supplier messaging (email, portal, EDI)</li>
+              <li>Confirmation tracking and delivery alerts</li>
+              <li>Full order history in one place</li>
             </ul>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">🔔</div>
-            <h3>Proactive Alerts</h3>
-            <p>
-              Mise watches for anomalies and flags them before they become
-              problems — a supplier price spike, an unusual waste day, or a
-              prep item running critically low.
-            </p>
-            <ul class="feature-list">
-              <li>Price anomaly detection</li>
-              <li>Low-stock and over-order warnings</li>
-              <li>Delivered via SMS, email, or in-app</li>
-            </ul>
-          </div>
+        </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">🔗</div>
-            <h3>Integrates With Everything</h3>
-            <p>
-              Mise connects to the tools you already use — Toast, Square,
-              Clover, US Foods, Sysco, and 40+ other POS and supplier
-              platforms.
-            </p>
-            <ul class="feature-list">
-              <li>Set up in under 30 minutes</li>
-              <li>No disruption to existing workflows</li>
-              <li>Open API for custom integrations</li>
-            </ul>
-          </div>
-
+        <div class="features__footnote">
+          <span class="features__footnote-icon">🔁</span>
+          <span><strong>Learning Loop</strong> — Mise improves with every order. The more it runs your kitchen, the more accurate its recommendations become.</span>
         </div>
       </div>
     </section>
@@ -273,60 +241,92 @@
       <div class="container">
         <div class="section-header">
           <span class="section-label">How it works</span>
-          <h2>Up and running in 30 minutes. Hands-off after that.</h2>
+          <h2>Messy data in. Clear actions out.</h2>
+          <p class="section-sub">
+            Mise sits between your existing systems and your suppliers,
+            turning raw restaurant data into exact recommendations you can act
+            on in seconds.
+          </p>
         </div>
 
-        <div class="steps">
-          <div class="step">
-            <div class="step__number">01</div>
-            <div class="step__content">
-              <h3>Connect your systems</h3>
-              <p>
-                Link your POS and supplier accounts. Mise pulls your historical
-                sales, current inventory, and existing order patterns to build
-                your kitchen's baseline.
-              </p>
+        <div class="flow">
+          <div class="flow__column">
+            <div class="flow__header flow__header--input">
+              <span class="flow__step-label">Input</span>
+              <h3>What Mise sees</h3>
             </div>
+            <ul class="flow__list">
+              <li>
+                <span class="flow__item-icon">🧾</span>
+                <span>Daily sales from your POS</span>
+              </li>
+              <li>
+                <span class="flow__item-icon">📦</span>
+                <span>Inventory levels on hand</span>
+              </li>
+              <li>
+                <span class="flow__item-icon">🏷️</span>
+                <span>Supplier pricing &amp; lead times</span>
+              </li>
+              <li>
+                <span class="flow__item-icon">🍽️</span>
+                <span>Menu items &amp; yield rates</span>
+              </li>
+            </ul>
           </div>
-          <div class="step__connector" aria-hidden="true"></div>
 
-          <div class="step">
-            <div class="step__number">02</div>
-            <div class="step__content">
-              <h3>Review your profile</h3>
-              <p>
-                Mise generates a restaurant profile with your approved vendors,
-                par levels, and cost targets. You review and approve — or
-                adjust anything to match how you like to run.
-              </p>
+          <div class="flow__arrow" aria-hidden="true">→</div>
+
+          <div class="flow__column flow__column--ai">
+            <div class="flow__header flow__header--ai">
+              <span class="flow__step-label">Mise AI</span>
+              <h3>What it figures out</h3>
             </div>
+            <ul class="flow__list">
+              <li>
+                <span class="flow__item-icon">🔍</span>
+                <span>Demand patterns by item &amp; day</span>
+              </li>
+              <li>
+                <span class="flow__item-icon">⚖️</span>
+                <span>What's surplus vs. what's at risk</span>
+              </li>
+              <li>
+                <span class="flow__item-icon">📅</span>
+                <span>Optimal order timing per supplier</span>
+              </li>
+              <li>
+                <span class="flow__item-icon">💡</span>
+                <span>Best-value purchasing options</span>
+              </li>
+            </ul>
           </div>
-          <div class="step__connector" aria-hidden="true"></div>
 
-          <div class="step">
-            <div class="step__number">03</div>
-            <div class="step__content">
-              <h3>Mise takes the wheel</h3>
-              <p>
-                From here, Mise monitors your inventory in real time, places
-                orders automatically, flags issues before they become
-                problems, and delivers a daily operations briefing to your
-                phone.
-              </p>
-            </div>
-          </div>
-          <div class="step__connector" aria-hidden="true"></div>
+          <div class="flow__arrow" aria-hidden="true">→</div>
 
-          <div class="step">
-            <div class="step__number">04</div>
-            <div class="step__content">
-              <h3>You stay in control</h3>
-              <p>
-                Every automated action is visible and overridable. Mise is your
-                AI operations manager — always working, always transparent,
-                never opaque.
-              </p>
+          <div class="flow__column">
+            <div class="flow__header flow__header--action">
+              <span class="flow__step-label">Action</span>
+              <h3>What you get</h3>
             </div>
+            <ul class="flow__list">
+              <li>
+                <span class="flow__item-icon">🥩</span>
+                <span>Prep list for today's service</span>
+              </li>
+              <li>
+                <span class="flow__item-icon">🛒</span>
+                <span>Exact order quantities to place</span>
+              </li>
+              <li>
+                <span class="flow__item-icon">🏪</span>
+                <span>Which supplier to buy from</span>
+              </li>
+              <li>
+                <span class="flow__item-icon">📤</span>
+                <span>Orders sent directly to suppliers</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -460,10 +460,11 @@
     <section class="cta-section" id="contact">
       <div class="container cta-section__inner">
         <div class="cta-section__text">
-          <h2>Ready to run like a national chain?</h2>
+          <h2>Run your kitchen smarter, starting tomorrow.</h2>
           <p>
-            Join operators already saving time and money with Mise. Get early
-            access today — free during our beta period.
+            Connect your POS and let Mise handle the rest. Independent
+            operators are already saving hours a week and cutting waste —
+            free during our beta period.
           </p>
         </div>
 
@@ -502,7 +503,7 @@
             </select>
           </div>
           <button type="submit" class="btn btn--primary btn--lg btn--full">
-            Request early access →
+            See your next order →
           </button>
           <p class="form-disclaimer">We'll reach out within 24 hours. No spam, ever.</p>
         </form>
@@ -518,7 +519,7 @@
         <a href="#" class="nav__logo">
           <span class="logo-mark">mise</span><span class="logo-dot">.</span>
         </a>
-        <p class="footer__tagline">The AI backend for restaurants.</p>
+        <p class="footer__tagline">Tells restaurants exactly what to prep, order, and buy.</p>
       </div>
 
       <div class="footer__links">

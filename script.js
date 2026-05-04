@@ -66,7 +66,7 @@
     // Add .reveal class to key section elements
     const selectors = [
       '.feature-card',
-      '.step',
+      '.flow__column',
       '.stat-card',
       '.result-metric',
       '.testimonial',

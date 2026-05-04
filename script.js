@@ -71,6 +71,7 @@
       '.impact__quote',
       '.loop__node',
       '.problem__statement',
+      '.pricing__card',
       '.cta-form',
     ];
 

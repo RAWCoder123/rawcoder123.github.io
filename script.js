@@ -7,6 +7,10 @@
 (function () {
   'use strict';
 
+  /* ---------- Constants ---------- */
+  // Vertical offset (px) for each hamburger span when animating to an X
+  var HAMBURGER_OFFSET = 7;
+
   /* ---------- Nav scroll effect ---------- */
   const navWrapper = document.getElementById('nav');
 
@@ -33,9 +37,9 @@
     // Animate hamburger spans into X
     const spans = hamburger.querySelectorAll('span');
     if (isOpen) {
-      spans[0].style.transform = 'translateY(7px) rotate(45deg)';
+      spans[0].style.transform = 'translateY(' + HAMBURGER_OFFSET + 'px) rotate(45deg)';
       spans[1].style.opacity   = '0';
-      spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
+      spans[2].style.transform = 'translateY(-' + HAMBURGER_OFFSET + 'px) rotate(-45deg)';
     } else {
       spans[0].style.transform = '';
       spans[1].style.opacity   = '';
@@ -119,7 +123,10 @@
         }
       });
 
-      if (emailInput.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value)) {
+      // RFC 5321 / HTML5-compatible email pattern: handles plus signs,
+      // multiple dots in local part/domain, and quoted strings.
+      var emailPattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
+      if (emailInput.value && !emailPattern.test(emailInput.value)) {
         emailInput.style.borderColor = '#DC2626';
         emailInput.style.boxShadow   = '0 0 0 3px rgba(220,38,38,.15)';
         valid = false;

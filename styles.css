@@ -12,8 +12,8 @@
   --color-ink-2:        #3D3A36;
   --color-ink-3:        #6B6560;
   --color-ink-4:        #9A9590;
-  --color-bg:           #FFFFFF;
-  --color-bg-alt:       #F7F5F1;
+  --color-bg:           #FAF8F4;
+  --color-bg-alt:       #F0EDE5;
   --color-border:       #DDD9D4;
 
   --font-display: 'Barlow Semi Condensed', 'Inter', system-ui, sans-serif;
@@ -165,7 +165,7 @@ ul { list-style: none; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #fff;
+  background: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -274,6 +274,14 @@ ul { list-style: none; }
 .hero__note {
   font-size: 0.8125rem;
   color: var(--color-ink-4);
+}
+
+.hero__sub--note {
+  font-size: 0.9375rem;
+  color: var(--color-ink-2);
+  font-weight: 500;
+  margin-bottom: 40px;
+  margin-top: -24px;
 }
 
 .hero__image {
@@ -421,7 +429,7 @@ ul { list-style: none; }
 
 .pipeline__step {
   padding: 36px 32px;
-  background: #fff;
+  background: var(--color-bg);
   border-right: 1px solid var(--color-border);
 }
 
@@ -556,7 +564,7 @@ ul { list-style: none; }
 .loop__node {
   padding: 40px 24px;
   text-align: center;
-  background: #fff;
+  background: var(--color-bg);
   border-right: 1px solid var(--color-border);
 }
 
@@ -685,7 +693,7 @@ ul { list-style: none; }
   font-family: var(--font-body);
   font-size: 0.9375rem;
   color: var(--color-ink);
-  background: #fff;
+  background: var(--color-bg);
   transition: border-color 150ms;
   outline: none;
   appearance: none;
@@ -724,7 +732,7 @@ ul { list-style: none; }
 
 .pricing__card {
   padding: 44px 36px;
-  background: #fff;
+  background: var(--color-bg);
   border-right: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
@@ -1082,7 +1090,7 @@ ul { list-style: none; }
     top: 64px;
     left: 0;
     right: 0;
-    background: #fff;
+    background: var(--color-bg);
     border-bottom: 1px solid var(--color-border);
     padding: 16px 24px;
     gap: 4px;

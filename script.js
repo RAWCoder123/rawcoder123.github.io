@@ -9,7 +9,7 @@
 
   /* ---------- Constants ---------- */
   // Vertical offset (px) for each hamburger span when animating to an X
-  var HAMBURGER_OFFSET = 7;
+  const HAMBURGER_OFFSET = 7;
 
   /* ---------- Nav scroll effect ---------- */
   const navWrapper = document.getElementById('nav');

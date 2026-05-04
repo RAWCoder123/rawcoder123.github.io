@@ -65,14 +65,13 @@
   function initReveal() {
     // Add .reveal class to key section elements
     const selectors = [
-      '.feature-card',
-      '.flow__column',
-      '.stat-card',
-      '.result-metric',
-      '.testimonial',
-      '.pricing-card',
-      '.problem__text',
-      '.problem__stats',
+      '.solution__item',
+      '.pipeline__step',
+      '.impact__item',
+      '.impact__quote',
+      '.loop__node',
+      '.problem__statement',
+      '.cta-form',
     ];
 
     selectors.forEach(function (sel) {

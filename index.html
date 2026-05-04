@@ -3,35 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mise is an AI operations system that tells restaurants exactly what to prep, order, and buy — and helps them execute it." />
-  <title>Mise — AI-Powered Restaurant Operations</title>
+  <meta name="description" content="Mise is a restaurant operations system that tells independent operators exactly what to prep, order, and buy — every day." />
+  <title>Mise — Restaurant Operations System</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- ===================== NAV ===================== -->
   <header class="nav-wrapper" id="nav">
     <nav class="nav container">
-      <a href="#" class="nav__logo">
-        <span class="logo-mark">mise</span><span class="logo-dot">.</span>
-      </a>
+      <a href="#" class="nav__logo">mise<span class="logo-dot">.</span></a>
 
       <ul class="nav__links" id="navLinks">
-        <li><a href="#features">Features</a></li>
+        <li><a href="#problem">The Problem</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
-        <li><a href="#results">Results</a></li>
+        <li><a href="#impact">Results</a></li>
         <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#approach">Our Model</a></li>
       </ul>
 
-      <div class="nav__cta">
-        <a href="#contact" class="btn btn--ghost">Sign in</a>
-        <a href="#contact" class="btn btn--primary">Get early access</a>
-      </div>
+      <a href="#contact" class="btn btn--primary nav__cta-btn">Request Access</a>
 
-      <button class="nav__hamburger" id="hamburger" aria-label="Toggle navigation">
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </nav>
@@ -40,198 +36,111 @@
   <main>
 
     <!-- ===================== HERO ===================== -->
-    <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero__badge">✦ Now in early access</div>
-        <h1 class="hero__heading">
-          Your kitchen's<br />AI operations system.
-        </h1>
+    <section class="hero" id="hero">
+      <div class="hero__content">
+        <div class="section-eyebrow">Restaurant Operations System</div>
+        <h1 class="hero__heading">Know exactly what to prep, order, and buy.<br>Every day.</h1>
         <p class="hero__sub">
-          Mise is an AI operations system that tells restaurants exactly what to
-          prep, order, and buy — and helps them execute it.
+          Mise is an operations system built for independent restaurants.
+          It watches your sales, tracks your <strong class="accent">inventory</strong>,
+          and tells your kitchen exactly what to do &mdash; automatically.
         </p>
         <div class="hero__actions">
-          <a href="#contact" class="btn btn--primary btn--lg">Run your kitchen smarter</a>
-          <a href="#how-it-works" class="btn btn--outline btn--lg">See how it works</a>
+          <a href="#contact" class="btn btn--primary btn--lg">Request Early Access</a>
+          <a href="#how-it-works" class="btn btn--ghost btn--lg">See How It Works</a>
         </div>
-        <p class="hero__disclaimer">Free during beta · No credit card required</p>
+        <p class="hero__note">Currently in early access with independent operators.</p>
       </div>
-
-      <div class="hero__visual" aria-hidden="true">
-        <div class="action-card">
-          <div class="action-card__header">
-            <span class="action-card__logo">mise<span class="logo-dot">.</span></span>
-            <span class="action-card__label">Today's recommendations</span>
-          </div>
-          <div class="action-card__list">
-            <div class="action-item">
-              <div class="action-item__icon">🥩</div>
-              <div class="action-item__body">
-                <div class="action-item__title">Prep 42 portions of salmon</div>
-                <div class="action-item__reason">Friday sales typically spike 28% — you'll need it</div>
-              </div>
-              <div class="action-item__badge action-item__badge--done">Done</div>
-            </div>
-            <div class="action-item action-item--highlight">
-              <div class="action-item__icon">📦</div>
-              <div class="action-item__body">
-                <div class="action-item__title">Order chicken breast — 40 lbs</div>
-                <div class="action-item__reason">Sysco · Tue delivery · 3-day lead time</div>
-              </div>
-              <div class="action-item__badge action-item__badge--approve">Approve</div>
-            </div>
-            <div class="action-item">
-              <div class="action-item__icon">💰</div>
-              <div class="action-item__body">
-                <div class="action-item__title">Switch beef supplier</div>
-                <div class="action-item__reason">US Foods saves $1.20/lb vs your current vendor</div>
-              </div>
-              <div class="action-item__badge action-item__badge--review">Review</div>
-            </div>
-            <div class="action-item">
-              <div class="action-item__icon">🥬</div>
-              <div class="action-item__body">
-                <div class="action-item__title">Skip romaine reorder this week</div>
-                <div class="action-item__reason">2 cases on hand · slower salad sales Mon–Wed</div>
-              </div>
-              <div class="action-item__badge action-item__badge--done">Done</div>
-            </div>
-          </div>
-          <div class="action-card__footer">
-            <span class="action-card__stat">✅ Mise handled 6 orders this week · Saved est. $340</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== LOGOS ===================== -->
-    <section class="logos">
-      <div class="container">
-        <p class="logos__label">Trusted by independent operators across the country</p>
-        <div class="logos__row">
-          <div class="logo-item">The Corner Bistro</div>
-          <div class="logo-item">Hearth &amp; Ember</div>
-          <div class="logo-item">Paloma Tacos</div>
-          <div class="logo-item">Oak &amp; Iron Kitchen</div>
-          <div class="logo-item">Saffron House</div>
-          <div class="logo-item">Harbor View Grill</div>
-        </div>
+      <div class="hero__image">
+        <img
+          src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=85&auto=format&fit=crop"
+          alt="Professional kitchen in action"
+          loading="eager"
+        />
       </div>
     </section>
 
     <!-- ===================== PROBLEM ===================== -->
-    <section class="problem">
+    <section class="problem" id="problem">
       <div class="container problem__inner">
-        <div class="problem__text">
-          <span class="section-label">The problem</span>
-          <h2>Built for operators who don't have time. Not analysts who want dashboards.</h2>
-          <p>
-            Most restaurants are over-ordering, under-ordering, and manually
-            managing everything in between — losing money to waste and losing
-            sales to empty shelves. All while running service.
+        <div class="problem__content">
+          <div class="section-eyebrow">The Problem</div>
+          <h2 class="section-heading">Running a kitchen on instinct costs real money.</h2>
+          <p class="problem__intro">
+            Most independent restaurants manage <strong class="accent">inventory</strong>,
+            ordering, and prep manually — on spreadsheets, whiteboards, and gut feel.
+            The result is predictable.
           </p>
-          <p>
-            Mise doesn't give you another system to learn. It watches your
-            sales, tracks your inventory, and tells you exactly what to prep,
-            order, and buy — in plain language, every day.
-          </p>
+          <div class="problem__statements">
+            <div class="problem__statement">
+              You're <strong class="accent">over-ordering</strong> ingredients that spoil before you need them.
+            </div>
+            <div class="problem__statement">
+              You're <strong class="accent">running out</strong> mid-service and losing revenue you can't recover.
+            </div>
+            <div class="problem__statement">
+              You're spending 10–15 hours a week on <strong class="accent">manual ordering</strong> and tracking.
+            </div>
+            <div class="problem__statement">
+              Your <strong class="accent">food cost</strong> is unpredictable and nobody can tell you exactly why.
+            </div>
+          </div>
         </div>
-        <div class="problem__stats">
-          <div class="stat-card">
-            <div class="stat-number">Over-order</div>
-            <div class="stat-desc">→ waste money on food that spoils before it's used</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">Under-order</div>
-            <div class="stat-desc">→ run out mid-service and lose revenue you can't recover</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">Manual work</div>
-            <div class="stat-desc">→ 10–15 hrs/week on ordering, tracking, and spreadsheets</div>
-          </div>
+        <div class="problem__image">
+          <img
+            src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=900&q=85&auto=format&fit=crop"
+            alt="Restaurant kitchen operations"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
 
-    <!-- ===================== FEATURES ===================== -->
-    <section class="features" id="features">
+    <!-- ===================== SOLUTION ===================== -->
+    <section class="solution" id="solution">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">What Mise does</span>
-          <h2>Four things. Done automatically, every day.</h2>
-          <p class="section-sub">
-            No setup complexity. No learning curve. Mise speaks your language —
-            ingredients, orders, and prep — not metrics and modules.
-          </p>
+          <div class="section-eyebrow">What Mise Does</div>
+          <h2 class="section-heading">Three things. Done automatically, every day.</h2>
+          <p class="section-sub">No dashboards to learn. No new workflows to build. Mise speaks your language — ingredients, prep, orders.</p>
         </div>
+        <div class="solution__grid">
 
-        <div class="features__grid">
-
-          <div class="feature-card feature-card--highlight">
-            <div class="feature-icon">📈</div>
-            <h3>Demand Intelligence</h3>
-            <p>
-              Mise reads your sales history and spots the patterns you don't
-              have time to notice — which items spike on weekends, how weather
-              affects covers, when a slow week follows a big one.
-            </p>
-            <ul class="feature-list">
-              <li>Predicts what you'll need before you run out</li>
-              <li>Accounts for seasonality and local events</li>
-              <li>Gets smarter the longer you use it</li>
-            </ul>
+          <div class="solution__item">
+            <div class="solution__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
+            </div>
+            <h3>Inventory Tracking</h3>
+            <p>Real-time depletion from your POS. Know what's on hand, what's expiring, and what's being wasted — without counting every shelf manually.</p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">📦</div>
-            <h3>Inventory Optimization</h3>
-            <p>
-              Know exactly what's on hand, what's being used, and what's about
-              to expire — without counting every shelf manually. Mise prevents
-              over-ordering and catches waste before it happens.
-            </p>
-            <ul class="feature-list">
-              <li>Real-time depletion from POS sales</li>
-              <li>Shelf-life and expiry alerts</li>
-              <li>Waste tracking with trend summaries</li>
-            </ul>
+          <div class="solution__item">
+            <div class="solution__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            <h3>Demand Forecasting</h3>
+            <p>Reads your sales history to spot patterns — which items spike on weekends, how seasonality shifts your menu, when to expect a slow cover count.</p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">🛒</div>
-            <h3>Purchase Recommendations</h3>
-            <p>
-              Every day, Mise generates exact supplier orders — the right
-              quantities, from the right vendors, timed to arrive exactly when
-              you need them. You approve in one tap or let it run.
-            </p>
-            <ul class="feature-list">
-              <li>Exact quantities based on real usage data</li>
-              <li>Best-price comparison across your vendors</li>
-              <li>Approve, adjust, or skip with one tap</li>
-            </ul>
+          <div class="solution__item">
+            <div class="solution__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="9" y1="13" x2="15" y2="13"/>
+                <line x1="9" y1="17" x2="12" y2="17"/>
+              </svg>
+            </div>
+            <h3>Purchase Automation</h3>
+            <p>Generates exact supplier orders daily — right quantities, right vendors, right timing. You approve in one tap, or let it run automatically.</p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">✅</div>
-            <h3>Order Execution</h3>
-            <p>
-              Once you approve, Mise sends the order directly to your
-              supplier — formatted exactly how they want it. No phone calls,
-              no faxes, no re-keying into a portal.
-            </p>
-            <ul class="feature-list">
-              <li>Direct supplier messaging (email, portal, EDI)</li>
-              <li>Confirmation tracking and delivery alerts</li>
-              <li>Full order history in one place</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="features__footnote">
-          <span class="features__footnote-icon">🔁</span>
-          <span><strong>Learning Loop</strong> — Mise improves with every order. The more it runs your kitchen, the more accurate its recommendations become.</span>
         </div>
       </div>
     </section>
@@ -240,219 +149,242 @@
     <section class="how-it-works" id="how-it-works">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">How it works</span>
-          <h2>Messy data in. Clear actions out.</h2>
-          <p class="section-sub">
-            Mise sits between your existing systems and your suppliers,
-            turning raw restaurant data into exact recommendations you can act
-            on in seconds.
-          </p>
+          <div class="section-eyebrow">How It Works</div>
+          <h2 class="section-heading">A system pipeline, not a product to explore.</h2>
+          <p class="section-sub">Mise connects your existing systems and runs automatically. Four steps. Zero manual work in between.</p>
         </div>
 
-        <div class="flow">
-          <div class="flow__column">
-            <div class="flow__header flow__header--input">
-              <span class="flow__step-label">Input</span>
-              <h3>What Mise sees</h3>
+        <div class="pipeline">
+          <div class="pipeline__step">
+            <div class="pipeline__num">01</div>
+            <div class="pipeline__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
             </div>
-            <ul class="flow__list">
-              <li>
-                <span class="flow__item-icon">🧾</span>
-                <span>Daily sales from your POS</span>
-              </li>
-              <li>
-                <span class="flow__item-icon">📦</span>
-                <span>Inventory levels on hand</span>
-              </li>
-              <li>
-                <span class="flow__item-icon">🏷️</span>
-                <span>Supplier pricing &amp; lead times</span>
-              </li>
-              <li>
-                <span class="flow__item-icon">🍽️</span>
-                <span>Menu items &amp; yield rates</span>
-              </li>
-            </ul>
+            <h4>Connect Your POS</h4>
+            <p>Mise reads your daily sales automatically. No manual entry. Works with Toast, Square, Lightspeed, and others.</p>
           </div>
+          <div class="pipeline__connector" aria-hidden="true">→</div>
 
-          <div class="flow__arrow" aria-hidden="true">→</div>
-
-          <div class="flow__column flow__column--ai">
-            <div class="flow__header flow__header--ai">
-              <span class="flow__step-label">Mise AI</span>
-              <h3>What it figures out</h3>
+          <div class="pipeline__step">
+            <div class="pipeline__num">02</div>
+            <div class="pipeline__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              </svg>
             </div>
-            <ul class="flow__list">
-              <li>
-                <span class="flow__item-icon">🔍</span>
-                <span>Demand patterns by item &amp; day</span>
-              </li>
-              <li>
-                <span class="flow__item-icon">⚖️</span>
-                <span>What's surplus vs. what's at risk</span>
-              </li>
-              <li>
-                <span class="flow__item-icon">📅</span>
-                <span>Optimal order timing per supplier</span>
-              </li>
-              <li>
-                <span class="flow__item-icon">💡</span>
-                <span>Best-value purchasing options</span>
-              </li>
-            </ul>
+            <h4>Inventory Updates in Real Time</h4>
+            <p>Every sale depletes your counts. Mise tracks what's on hand at all times, flags expiry risks, and surfaces waste patterns.</p>
           </div>
+          <div class="pipeline__connector" aria-hidden="true">→</div>
 
-          <div class="flow__arrow" aria-hidden="true">→</div>
-
-          <div class="flow__column">
-            <div class="flow__header flow__header--action">
-              <span class="flow__step-label">Action</span>
-              <h3>What you get</h3>
+          <div class="pipeline__step">
+            <div class="pipeline__num">03</div>
+            <div class="pipeline__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"/>
+                <line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
             </div>
-            <ul class="flow__list">
-              <li>
-                <span class="flow__item-icon">🥩</span>
-                <span>Prep list for today's service</span>
-              </li>
-              <li>
-                <span class="flow__item-icon">🛒</span>
-                <span>Exact order quantities to place</span>
-              </li>
-              <li>
-                <span class="flow__item-icon">🏪</span>
-                <span>Which supplier to buy from</span>
-              </li>
-              <li>
-                <span class="flow__item-icon">📤</span>
-                <span>Orders sent directly to suppliers</span>
-              </li>
-            </ul>
+            <h4>Forecast What You'll Need</h4>
+            <p>Mise analyzes your historical patterns and predicts demand — by item, by day, by season — before you run short or over-order.</p>
+          </div>
+          <div class="pipeline__connector" aria-hidden="true">→</div>
+
+          <div class="pipeline__step">
+            <div class="pipeline__num">04</div>
+            <div class="pipeline__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+            </div>
+            <h4>Orders Sent to Suppliers</h4>
+            <p>Exact orders go directly to your suppliers — formatted how they want it. You review and approve, or Mise handles it entirely.</p>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- ===================== RESULTS ===================== -->
-    <section class="results" id="results">
+    <!-- ===================== IMPACT ===================== -->
+    <section class="impact" id="impact">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">Results</span>
-          <h2>What operators see in the first 90 days.</h2>
+          <div class="section-eyebrow">Results</div>
+          <h2 class="section-heading">What operators see in the first 90 days.</h2>
         </div>
 
-        <div class="results__grid">
-          <div class="result-metric">
-            <div class="result-number">↓ 18%</div>
-            <div class="result-label">Reduction in food cost percentage</div>
+        <div class="impact__grid">
+          <div class="impact__item">
+            <div class="impact__number">↓ 18%</div>
+            <div class="impact__label">Reduction in food cost</div>
           </div>
-          <div class="result-metric">
-            <div class="result-number">↓ 31%</div>
-            <div class="result-label">Less food waste</div>
+          <div class="impact__item">
+            <div class="impact__number">↓ 31%</div>
+            <div class="impact__label">Less food waste</div>
           </div>
-          <div class="result-metric">
-            <div class="result-number">12 hrs</div>
-            <div class="result-label">Per week saved on admin &amp; purchasing</div>
+          <div class="impact__item">
+            <div class="impact__number">12 hrs</div>
+            <div class="impact__label">Per week saved on ordering and admin</div>
           </div>
-          <div class="result-metric">
-            <div class="result-number">$1,400</div>
-            <div class="result-label">Average monthly savings per location</div>
+          <div class="impact__item">
+            <div class="impact__number">$1,400</div>
+            <div class="impact__label">Average monthly savings per location</div>
           </div>
         </div>
 
-        <div class="testimonials">
-          <div class="testimonial">
-            <blockquote>
-              "I used to spend Sunday nights doing ordering. Now Mise does it
-              automatically and I actually get a day off. And my food cost went
-              from 34% down to 29%."
-            </blockquote>
-            <cite>
-              <strong>Marcus T.</strong> · Owner, The Corner Bistro, Austin TX
-            </cite>
-          </div>
-          <div class="testimonial">
-            <blockquote>
-              "We have four locations. Before Mise, inventory was a disaster.
-              Now each location basically manages itself and I can focus on
-              actually growing the business."
-            </blockquote>
-            <cite>
-              <strong>Priya S.</strong> · Operator, Paloma Tacos (4 locations), Chicago IL
-            </cite>
-          </div>
-          <div class="testimonial">
-            <blockquote>
-              "The thing that surprised me most was the purchasing
-              automation. I didn't think I'd trust an AI with my orders, but
-              it's smarter about our usage patterns than I was."
-            </blockquote>
-            <cite>
-              <strong>Damien R.</strong> · Executive Chef &amp; Owner, Oak &amp; Iron Kitchen, Portland OR
-            </cite>
-          </div>
+        <div class="impact__quote">
+          <blockquote>
+            "I used to spend Sunday nights doing ordering. Now Mise does it automatically and I actually get a day off.
+            My food cost went from 34% down to 29%."
+          </blockquote>
+          <cite>Marcus T. — Owner, The Corner Bistro, Austin TX</cite>
         </div>
+
       </div>
     </section>
 
     <!-- ===================== PRICING ===================== -->
     <section class="pricing" id="pricing">
       <div class="container">
-        <div class="section-header">
-          <span class="section-label">Pricing</span>
-          <h2>Simple, transparent pricing.</h2>
-          <p class="section-sub">All plans include full access during beta. Cancel anytime.</p>
+        <div class="section-header pricing__header">
+          <div class="section-eyebrow">Pricing</div>
+          <h2 class="section-heading">Simple, transparent pricing.</h2>
+          <p class="section-sub">No hidden fees. No long-term lock-in. Pick the plan that fits your operation.</p>
         </div>
 
         <div class="pricing__grid">
 
-          <div class="pricing-card">
-            <div class="plan-name">Starter</div>
-            <div class="plan-price"><span class="price-amount">$149</span><span class="price-period">/mo per location</span></div>
-            <div class="plan-desc">Perfect for a single-location operator getting started with automation.</div>
-            <ul class="plan-features">
-              <li>✓ Purchasing automation</li>
-              <li>✓ Live inventory tracking</li>
-              <li>✓ Daily operations briefing</li>
-              <li>✓ 2 POS integrations</li>
-              <li>✓ Email &amp; SMS alerts</li>
-              <li>✓ 1 user seat</li>
+          <!-- Independent -->
+          <div class="pricing__card">
+            <div class="pricing__tier">Independent</div>
+            <div class="pricing__amount">
+              <span class="pricing__dollar">$</span>20<span class="pricing__period">/mo</span>
+            </div>
+            <div class="pricing__desc">Built for single-location operators who want real control over their food costs and ordering — without the manual work.</div>
+            <ul class="pricing__features">
+              <li>1 location</li>
+              <li>POS integration (Toast, Square, Lightspeed)</li>
+              <li>Automated inventory tracking</li>
+              <li>Daily demand forecasting</li>
+              <li>Supplier order automation</li>
+              <li>Email support</li>
             </ul>
-            <a href="#contact" class="btn btn--outline btn--full">Get started</a>
+            <a href="#contact" class="btn btn--ghost btn--full">Get Started →</a>
           </div>
 
-          <div class="pricing-card pricing-card--featured">
-            <div class="plan-badge">Most Popular</div>
-            <div class="plan-name">Operator</div>
-            <div class="plan-price"><span class="price-amount">$299</span><span class="price-period">/mo per location</span></div>
-            <div class="plan-desc">Full automation suite for serious independent operators.</div>
-            <ul class="plan-features">
-              <li>✓ Everything in Starter</li>
-              <li>✓ Financial command center</li>
-              <li>✓ Menu engineering insights</li>
-              <li>✓ Unlimited integrations</li>
-              <li>✓ Multi-location dashboard</li>
-              <li>✓ 5 user seats</li>
-              <li>✓ Priority support</li>
+          <!-- Multi-location (featured) -->
+          <div class="pricing__card pricing__card--featured">
+            <div class="pricing__badge">Most Popular</div>
+            <div class="pricing__tier">Multi-Location</div>
+            <div class="pricing__amount">
+              <span class="pricing__dollar">$</span>50<span class="pricing__period">/mo</span>
+            </div>
+            <div class="pricing__desc">For operators running 2 or more locations who need unified visibility, cross-location reporting, and collective purchasing power.</div>
+            <ul class="pricing__features">
+              <li>2+ locations (per location)</li>
+              <li>Everything in Independent</li>
+              <li>Cross-location inventory view</li>
+              <li>Collective demand aggregation</li>
+              <li>Bulk supplier pricing access</li>
+              <li>Priority support</li>
             </ul>
-            <a href="#contact" class="btn btn--primary btn--full">Get started</a>
+            <a href="#contact" class="btn btn--primary btn--full">Get Started →</a>
           </div>
 
-          <div class="pricing-card">
-            <div class="plan-name">Enterprise</div>
-            <div class="plan-price"><span class="price-amount">Custom</span></div>
-            <div class="plan-desc">For groups with 5+ locations or unique operational requirements.</div>
-            <ul class="plan-features">
-              <li>✓ Everything in Operator</li>
-              <li>✓ Dedicated success manager</li>
-              <li>✓ Custom integrations</li>
-              <li>✓ White-glove onboarding</li>
-              <li>✓ SLA guarantees</li>
-              <li>✓ Unlimited seats</li>
+          <!-- Enterprise -->
+          <div class="pricing__card">
+            <div class="pricing__tier">Enterprise</div>
+            <div class="pricing__amount pricing__amount--tbd">
+              Let's Talk
+            </div>
+            <div class="pricing__desc">Custom deployments for large restaurant groups, franchises, and hospitality brands with 10+ locations or complex supply chains.</div>
+            <ul class="pricing__features">
+              <li>10+ locations</li>
+              <li>Everything in Multi-Location</li>
+              <li>Custom integrations &amp; workflows</li>
+              <li>Dedicated onboarding specialist</li>
+              <li>SLA &amp; uptime guarantees</li>
+              <li>White-glove supplier negotiations</li>
             </ul>
-            <a href="#contact" class="btn btn--outline btn--full">Contact sales</a>
+            <a href="#contact" class="btn btn--ghost btn--full">Contact Us →</a>
           </div>
 
         </div>
+
+        <p class="pricing__note">All plans include a 30-day free trial. No credit card required to start.</p>
+      </div>
+    </section>
+
+    <!-- ===================== NEW APPROACH ===================== -->
+    <section class="approach" id="approach">
+      <div class="container">
+        <div class="section-header approach__header">
+          <div class="section-eyebrow">A New Model</div>
+          <h2 class="section-heading">Collective purchasing power for independent operators.</h2>
+          <p class="section-sub">
+            Mise aggregates demand across multiple restaurants to unlock supplier pricing
+            that only large chains normally access.
+          </p>
+        </div>
+
+        <div class="approach__loop">
+          <div class="loop__node">
+            <div class="loop__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <div class="loop__label">Restaurants<br>Share Demand</div>
+          </div>
+          <div class="loop__arrow" aria-hidden="true">→</div>
+
+          <div class="loop__node">
+            <div class="loop__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="18" cy="18" r="3"/>
+                <circle cx="6" cy="6" r="3"/>
+                <path d="M13 6h3a2 2 0 0 1 2 2v7"/>
+                <line x1="6" y1="9" x2="6" y2="21"/>
+              </svg>
+            </div>
+            <div class="loop__label">Mise Aggregates<br>Orders</div>
+          </div>
+          <div class="loop__arrow" aria-hidden="true">→</div>
+
+          <div class="loop__node">
+            <div class="loop__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 0 1-8 0"/>
+              </svg>
+            </div>
+            <div class="loop__label">Bulk Purchasing<br>from Suppliers</div>
+          </div>
+          <div class="loop__arrow" aria-hidden="true">→</div>
+
+          <div class="loop__node loop__node--accent">
+            <div class="loop__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"/>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <div class="loop__label">Lower Costs for<br>Every Operator</div>
+          </div>
+        </div>
+
+        <p class="approach__note">
+          Independent operators gain the purchasing leverage of a 50-location chain — without giving up control over their menu or suppliers.
+        </p>
+
       </div>
     </section>
 
@@ -460,52 +392,45 @@
     <section class="cta-section" id="contact">
       <div class="container cta-section__inner">
         <div class="cta-section__text">
-          <h2>Run your kitchen smarter, starting tomorrow.</h2>
+          <div class="section-eyebrow">Get Started</div>
+          <h2 class="section-heading">Run your kitchen on data, not instinct.</h2>
           <p>
-            Connect your POS and let Mise handle the rest. Independent
-            operators are already saving hours a week and cutting waste —
-            free during our beta period.
+            We're working with a small group of independent operators during our early access period.
+            Connect your POS and Mise is operational within 48 hours.
           </p>
+          <ul class="cta-section__points">
+            <li>Plans from $20/month — no hidden fees</li>
+            <li>30-day free trial, no credit card required</li>
+            <li>Live and integrated within 48 hours</li>
+            <li>Onboarding support included</li>
+          </ul>
         </div>
 
         <form class="cta-form" id="ctaForm" novalidate>
-          <div class="form-row">
-            <input
-              type="text"
-              name="name"
-              placeholder="Your name"
-              required
-              class="form-input"
-              autocomplete="name"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Work email"
-              required
-              class="form-input"
-              autocomplete="email"
-            />
+          <div class="form-group">
+            <label for="fname">Your Name</label>
+            <input type="text" id="fname" name="name" placeholder="Full name" required autocomplete="name" class="form-input" />
           </div>
-          <div class="form-row">
-            <input
-              type="text"
-              name="restaurant"
-              placeholder="Restaurant name"
-              class="form-input"
-            />
-            <select name="locations" class="form-input form-select">
-              <option value="" disabled selected>Number of locations</option>
+          <div class="form-group">
+            <label for="femail">Work Email</label>
+            <input type="email" id="femail" name="email" placeholder="you@restaurant.com" required autocomplete="email" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="frestaurant">Restaurant Name</label>
+            <input type="text" id="frestaurant" name="restaurant" placeholder="Your restaurant" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="flocations">Number of Locations</label>
+            <select id="flocations" name="locations" class="form-input form-select">
+              <option value="" disabled selected>Select...</option>
               <option value="1">1 location</option>
               <option value="2-4">2–4 locations</option>
               <option value="5-10">5–10 locations</option>
               <option value="10+">10+ locations</option>
             </select>
           </div>
-          <button type="submit" class="btn btn--primary btn--lg btn--full">
-            See your next order →
-          </button>
-          <p class="form-disclaimer">We'll reach out within 24 hours. No spam, ever.</p>
+          <button type="submit" class="btn btn--primary btn--full">Request Early Access →</button>
+          <p class="form-disclaimer">We'll respond within 24 hours. No spam.</p>
         </form>
       </div>
     </section>
@@ -516,40 +441,17 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <a href="#" class="nav__logo">
-          <span class="logo-mark">mise</span><span class="logo-dot">.</span>
-        </a>
-        <p class="footer__tagline">Tells restaurants exactly what to prep, order, and buy.</p>
+        <a href="#" class="footer__logo">mise<span class="logo-dot">.</span></a>
+        <p>Tells restaurants exactly what to prep, order, and buy.</p>
       </div>
-
-      <div class="footer__links">
-        <div class="footer__col">
-          <h4>Product</h4>
-          <ul>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#results">Results</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Press</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Security</a></li>
-          </ul>
-        </div>
-      </div>
+      <nav class="footer__nav" aria-label="Footer links">
+          <a href="#problem">The Problem</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#impact">Results</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#approach">Our Model</a>
+          <a href="#contact">Contact</a>
+        </nav>
     </div>
     <div class="footer__bottom">
       <div class="container">

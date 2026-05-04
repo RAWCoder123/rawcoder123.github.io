@@ -241,6 +241,7 @@ ul { list-style: none; }
   flex-direction: column;
   justify-content: center;
   /* Align text edge with container */
+  /* Align left edge of text with the container boundary on wide viewports */
   margin-left: max(0px, calc((100vw - var(--container-max)) / 2));
   max-width: calc(var(--container-max) / 2);
 }
